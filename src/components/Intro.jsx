@@ -1,13 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import sound from "../assets/intro-song.mp3";
 import { useState } from "react";
 
-export default function Intro() {
-  const [playGame, setPlayGame] = useState(false);
-
-  function play() {
+export default function Intro({ playGame, setPlayGame }) {
+  if (playGame) {
     new Audio(sound).play();
-    setPlayGame((prevGame) => !prevGame);
   }
 
   return (
@@ -22,7 +20,12 @@ export default function Intro() {
           <p className="instructions">
             Don&apos;t click the same character more than once!
           </p>
-          <button className="play-button" onClick={play}>
+          <button
+            className="play-button"
+            onClick={() => {
+              setPlayGame(true);
+            }}
+          >
             Click to Start
           </button>
         </div>
