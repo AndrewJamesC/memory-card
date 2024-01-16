@@ -48,6 +48,13 @@
   min-width: fit-content;
 }
 
+.card-collection-container {
+  display: flex;
+  margin: auto;
+  width: 50vw;
+  height: 55vh;
+}
+
 .card-container {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   width: fit-content;
