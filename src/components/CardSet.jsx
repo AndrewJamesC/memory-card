@@ -53,11 +53,12 @@ export default function CardSet({
           name={character.name}
           key={character.id}
           id={character.id}
-          onClick={(event) => handleCardClick(event)}
+          handleCardClick={handleCardClick}
         />
       );
     });
   }
+
   let render;
   if (playGame) {
     render = displayCards(getRandomCards());

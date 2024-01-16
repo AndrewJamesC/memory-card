@@ -16,8 +16,8 @@ function App() {
   }, [gameMode]);
 
   function handleCardClick(event) {
-    const clickedCard = event.target.id;
-    setClickedCardIds((prevCards) => [...prevCards, clickedCard]);
+    const clickedID = event.target.id.replace(/\D/g, "");
+    setClickedCardIds((prevCards) => [...prevCards, clickedID]);
   }
   return (
     <>
@@ -30,6 +30,7 @@ function App() {
           playGame={playGame}
         />
       )}
+      <h1>{clickedCardIds}</h1>
     </>
   );
 }
