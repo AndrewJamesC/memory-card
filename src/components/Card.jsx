@@ -1,12 +1,9 @@
-export default function Card() {
+/* eslint-disable react/prop-types */
+export default function Card({ src, name, id }) {
   return (
-    <div className="card-container">
-      <img
-        className="character-img"
-        src="/src/assets/img/Abe_Simpson.png"
-        alt="Abe Simpson"
-      />
-      <p className="character-name">Abe Simpson</p>
+    <div className="card-container" id={`card${id}`}>
+      <img className="character-img" src={src} alt={name} />
+      <p className="character-name">{name}</p>
     </div>
   );
 }

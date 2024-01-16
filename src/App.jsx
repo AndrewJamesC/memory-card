@@ -1,12 +1,12 @@
 import Intro from "./components/Intro";
-import Card from "./components/Card";
+import CardCollection from "./components/CardCollection";
 import "./styles/App.css";
 
 function App() {
   return (
     <>
       <Intro />
-      <Card />
+      <CardCollection />
     </>
   );
 }
