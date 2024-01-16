@@ -17,11 +17,18 @@ function App() {
 
   function handleCardClick(event) {
     const clickedID = event.target.id.replace(/\D/g, "");
+    if (clickedCardIds.includes(clickedID)) {
+      console.log("You lose");
+    }
     setClickedCardIds((prevCards) => [...prevCards, clickedID]);
+  }
+
+  function handleSetPlayGame() {
+    setPlayGame(true);
   }
   return (
     <>
-      <Intro playGame={playGame} setPlayGame={setPlayGame} />
+      <Intro playGame={playGame} handleSetPlayGame={handleSetPlayGame} />
       {playGame && (
         <CardSet
           clickedCardIds={clickedCardIds}

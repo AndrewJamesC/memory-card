@@ -3,9 +3,12 @@
 import sound from "../assets/intro-song.mp3";
 import { useState } from "react";
 
-export default function Intro({ playGame, setPlayGame }) {
-  if (playGame) {
+export default function Intro({ playGame, handleSetPlayGame }) {
+  const [audioPlayed, setAudioPlayed] = useState(false);
+
+  if (playGame && !audioPlayed) {
     new Audio(sound).play();
+    setAudioPlayed(true);
   }
 
   return (
@@ -23,7 +26,7 @@ export default function Intro({ playGame, setPlayGame }) {
           <button
             className="play-button"
             onClick={() => {
-              setPlayGame(true);
+              handleSetPlayGame();
             }}
           >
             Click to Start
