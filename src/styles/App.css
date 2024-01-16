@@ -1,0 +1,49 @@
+.logo {
+  width: 80vw;
+  margin-left: 10%;
+  padding: 10px;
+  transition: width, 3s;
+}
+
+.logo.small {
+  width: 20vw;
+  padding: 10px;
+  margin: 0;
+}
+
+.instructions-container {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.instructions {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.play-button {
+  background-color: #1899d6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: auto;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  min-width: fit-content;
+}

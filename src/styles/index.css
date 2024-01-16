@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/img/cloud-background.jpg);
+  height: 100vh;
+}
+
+section {
+  width: 100vw;
+}
