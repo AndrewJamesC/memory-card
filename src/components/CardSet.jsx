@@ -31,7 +31,9 @@ export default function CardSet({
       }
       while (cardIdArr.length < numOfCards) {
         const randomCardId = Math.floor(Math.random() * characterData.length);
-        cardIdArr.push(randomCardId);
+        if (!cardIdArr.includes(randomCardId)) {
+          cardIdArr.push(randomCardId);
+        }
       }
 
       return cardIdArr;
