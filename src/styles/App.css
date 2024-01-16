@@ -47,3 +47,22 @@
   width: 100%;
   min-width: fit-content;
 }
+
+.card-container {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  width: fit-content;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.character-img {
+  padding: 10px;
+}
+
+.character-name {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
