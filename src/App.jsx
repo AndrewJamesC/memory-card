@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Intro from "./components/Intro";
 import CardCollection from "./components/CardCollection";
 
@@ -11,6 +11,17 @@ function App() {
   const [playGame, setPlayGame] = useState(false);
   const [result, setResult] = useState("");
   const [currentScore, setCurrentScore] = useState(0);
+  const [highScore, setHighScore] = useState(
+    JSON.parse(localStorage.getItem("highScore")) || 0
+  );
+
+  useEffect(() => {
+    if (currentScore > highScore) {
+      const highScoreStr = JSON.stringify(currentScore);
+      localStorage.setItem("highScore", highScoreStr);
+      setHighScore(JSON.parse(localStorage.getItem("highScore")));
+    }
+  }, [currentScore]);
 
   function handleCardClick(event) {
     const clickedID = Number(event.target.id.replace(/\D/g, ""));
@@ -28,7 +39,12 @@ function App() {
   }
   return (
     <>
-      {playGame && <div className="currentScore">{currentScore}</div>}
+      {playGame && (
+        <div className="scores-container">
+          <div>Score: {currentScore}</div>
+          <div>High Score: {highScore}</div>
+        </div>
+      )}
       <Intro playGame={playGame} handleSetPlayGame={handleSetPlayGame} />
       {playGame && (
         <CardCollection
@@ -38,7 +54,10 @@ function App() {
           playGame={playGame}
         />
       )}
-      <h1>{clickedCardIds.toString()}</h1>
+      <h1>
+        {clickedCardIds.toString()}
+        {console.log(highScore)}
+      </h1>
     </>
   );
 }
