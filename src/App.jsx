@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Intro from "./components/Intro";
 import CardCollection from "./components/CardCollection";
+import Lost from "./components/Lost";
 
 import "./styles/App.css";
 
@@ -27,6 +28,7 @@ function App() {
     const clickedID = Number(event.target.id.replace(/\D/g, ""));
     if (clickedCardIds.includes(clickedID)) {
       setResult("lost");
+      setPlayGame(false);
       console.log("You lose");
       return;
     }
@@ -37,6 +39,13 @@ function App() {
   function handleSetPlayGame() {
     setPlayGame(true);
   }
+
+  function handlePlayAgain() {
+    setPlayGame(false);
+    setResult("");
+    setCurrentScore(0);
+    setClickedCardIds([]);
+  }
   return (
     <>
       {playGame && (
@@ -45,7 +54,9 @@ function App() {
           <div>High Score: {highScore}</div>
         </div>
       )}
-      <Intro playGame={playGame} handleSetPlayGame={handleSetPlayGame} />
+      {result === "" && (
+        <Intro playGame={playGame} handleSetPlayGame={handleSetPlayGame} />
+      )}
       {playGame && (
         <CardCollection
           clickedCardIds={clickedCardIds}
@@ -54,10 +65,7 @@ function App() {
           playGame={playGame}
         />
       )}
-      <h1>
-        {clickedCardIds.toString()}
-        {console.log(highScore)}
-      </h1>
+      {result === "lost" && <Lost handlePlayAgain={handlePlayAgain} />}
     </>
   );
 }
