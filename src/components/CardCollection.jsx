@@ -3,7 +3,12 @@ import characterData from "./Data";
 import Card from "./Card";
 import { useState, useEffect } from "react";
 
-export default function CardCollection({ clickedCardIds, handleCardClick }) {
+export default function CardCollection({
+  clickedCardIds,
+  handleCardClick,
+  setResult,
+  setPlayGame,
+}) {
   const [currentCards, setCurrentCards] = useState([]);
   const [renderedCards, setRenderedCards] = useState([]);
 
@@ -12,7 +17,9 @@ export default function CardCollection({ clickedCardIds, handleCardClick }) {
 
     function getRandomCardIds(clickedCardIds) {
       if (clickedCardIds.length === characterData.length) {
-        console.log("You win");
+        console.log("You win cardCollection");
+        setResult("win");
+        setPlayGame(false);
         return [];
       }
       let cardNotClicked = false;
