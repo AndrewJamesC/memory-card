@@ -1,62 +1,74 @@
+import abe from "/home/andrew/repos/memory-card/src/assets/img/Abe_Simpson.png";
+import Barney from "/home/andrew/repos/memory-card/src/assets/img/Barney_Gumble.png";
+import Bart from "/home/andrew/repos/memory-card/src/assets/img/Bart_Simpson_200px.png";
+import Homer from "/home/andrew/repos/memory-card/src/assets/img/Homer_Simpson_2006.png";
+import Lisa from "/home/andrew/repos/memory-card/src/assets/img/Lisa_Simpson.png";
+import Maggie from "/home/andrew/repos/memory-card/src/assets/img/Maggie_Simpson.png";
+import Marge from "/home/andrew/repos/memory-card/src/assets/img/Marge_Simpson.png";
+import Milhouse from "/home/andrew/repos/memory-card/src/assets/img/Milhouse_Van_Houten.png";
+import Moe from "/home/andrew/repos/memory-card/src/assets/img/Moe_Szyslak.png";
+import MrBurns from "/home/andrew/repos/memory-card/src/assets/img/Mr_Burns.png";
+import Flanders from "/home/andrew/repos/memory-card/src/assets/img/Ned_Flanders.png";
+import Smithers from "/home/andrew/repos/memory-card/src/assets/img/Waylon_Smithers_1.png";
 const characterData = [
   {
     name: "Abe Simpson",
-    src: "/src/assets/img/Abe_Simpson.png",
+    src: abe,
     id: 0,
   },
   {
     name: "Barney Gumble",
-    src: "/src/assets/img/Barney_Gumble.png",
+    src: Barney,
     id: 1,
   },
   {
     name: "Bart Simpson",
-    src: "/src/assets/img/Bart_Simpson_200px.png",
+    src: Bart,
     id: 2,
   },
   {
     name: "Homer Simpson",
-    src: "/src/assets/img/Homer_Simpson_2006.png",
+    src: Homer,
     id: 3,
   },
   {
     name: "Lisa Simpson",
-    src: "/src/assets/img/Lisa_Simpson.png",
+    src: Lisa,
     id: 4,
   },
   {
     name: "Maggie Simpson",
-    src: "/src/assets/img/Maggie_Simpson.png",
+    src: Maggie,
     id: 5,
   },
   {
     name: "Marge Simpson",
-    src: "/src/assets/img/Marge_Simpson.png",
+    src: Marge,
     id: 6,
   },
   {
     name: "Milhouse Van Houten",
-    src: "/src/assets/img/Milhouse_Van_Houten.png",
+    src: Milhouse,
     id: 7,
   },
   {
     name: "Moe Szyslak",
-    src: "/src/assets/img/Moe_Szyslak.png",
+    src: Moe,
     id: 8,
   },
   {
     name: "Mr. Burns",
-    src: "/src/assets/img/Mr_Burns.png",
+    src: MrBurns,
     id: 9,
   },
   {
     name: "Ned Flanders",
-    src: "/src/assets/img/Ned_Flanders.png",
+    src: Flanders,
     id: 10,
   },
   {
     name: "Smithers",
-    src: "/src/assets/img/Waylon_Smithers_1.png",
+    src: Smithers,
     id: 11,
   },
 ];
