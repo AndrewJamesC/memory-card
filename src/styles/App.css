@@ -34,6 +34,14 @@
   .win-screen .win-img {
     width: 290px;
   }
+
+  #root .lost-screen {
+    height: 80vh;
+  }
+
+  #root .win-screen {
+    height: 80vh;
+  }
   .lost-screen .you-lose {
     font-size: 4rem;
     width: 100vw;
