@@ -121,7 +121,6 @@
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid green;
   display: flex;
   flex-direction: column;
 }
@@ -195,4 +194,9 @@
     1px 1px 0 #000;
   cursor: pointer;
   padding: 10px;
+}
+
+.card-container:hover {
+  transform: translateY(-10%);
+  transition: ease 0.5s;
 }

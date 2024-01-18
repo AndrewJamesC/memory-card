@@ -28,7 +28,6 @@ function App() {
     if (clickedCardIds.includes(clickedID)) {
       setResult("lost");
       setPlayGame(false);
-      console.log("You lose");
       return;
     }
 
