@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import logoImg from "../assets/The-Simpsons-yellow-logo.svg";
+import logoImg from "/src/assets/img/The-Simpsons-yellow-logo.svg";
 import sound from "../assets/intro-song.mp3";
 import { useState } from "react";
 
