@@ -5,9 +5,16 @@ export default function Lost({ handlePlayAgain }) {
   new Audio(lostSound).play();
   return (
     <div className="lost-screen">
-      <p>D&apos;oh, you lose!</p>
-      <img src="/src/assets/img/lost-homer.jpg" alt="Homer is angry" />
-      <button onClick={() => handlePlayAgain()}>Play Again</button>
+      <p className="you-lose top">D&apos;oh</p>
+      <p className="you-lose bottom">You lose!</p>
+      <img
+        className="lost-img"
+        src="/src/assets/img/lost-homer.jpg"
+        alt="Homer is angry"
+      />
+      <button className="lost-btn" onClick={() => handlePlayAgain()}>
+        Play Again
+      </button>
     </div>
   );
 }

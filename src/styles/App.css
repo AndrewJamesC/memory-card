@@ -26,6 +26,25 @@
   .card-container .character-name {
     font-size: 1.6vh;
   }
+
+  .lost-screen .lost-img {
+    width: 290px;
+  }
+
+  .win-screen .win-img {
+    width: 290px;
+  }
+  .lost-screen .you-lose {
+    font-size: 4rem;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .win-screen .you-win {
+    font-size: 4rem;
+    width: 100vw;
+    text-align: center;
+  }
 }
 
 @font-face {
@@ -129,5 +148,51 @@
 }
 
 .scores-container div {
+  padding: 10px;
+}
+
+.lost-screen,
+.win-screen {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.lost-img,
+.win-img {
+  width: 590px;
+  border-radius: 10px;
+}
+
+.you-lose,
+.you-win {
+  margin: 100px 0;
+  z-index: 1;
+  font-size: 7rem;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.lost-screen .top {
+  margin-bottom: 0;
+}
+.lost-screen .bottom {
+  margin-top: 0;
+}
+
+.lost-btn,
+.win-btn {
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-size: 3rem;
+  margin-top: 50px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  cursor: pointer;
   padding: 10px;
 }
