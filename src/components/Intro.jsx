@@ -29,7 +29,7 @@ export default function Intro({ playGame, handleSetPlayGame }) {
               handleSetPlayGame();
             }}
           >
-            Click to Start
+            PLAY
           </button>
         </div>
       )}

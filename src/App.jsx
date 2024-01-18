@@ -1,16 +1,13 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import Intro from "./components/Intro";
 import CardCollection from "./components/CardCollection";
 import Lost from "./components/Lost";
 import Win from "./components/Win";
-import characterData from "./components/Data";
 
 import "./styles/App.css";
 
 function App() {
   const [clickedCardIds, setClickedCardIds] = useState([]);
-  const [gameMode, setGameMode] = useState("easy");
   const [playGame, setPlayGame] = useState(false);
   const [result, setResult] = useState("");
   const [currentScore, setCurrentScore] = useState(0);
@@ -53,8 +50,8 @@ function App() {
     <>
       {playGame && (
         <div className="scores-container">
-          <div>Score: {currentScore}</div>
           <div>High Score: {highScore}</div>
+          <div>Score: {currentScore}</div>
         </div>
       )}
       {result === "" && (
@@ -63,7 +60,6 @@ function App() {
       {playGame && (
         <CardCollection
           clickedCardIds={clickedCardIds}
-          gameMode={gameMode}
           handleCardClick={handleCardClick}
           playGame={playGame}
           setResult={setResult}

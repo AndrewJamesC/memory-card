@@ -6,7 +6,13 @@ export default function Card({ src, name, id, handleCardClick }) {
       id={`card${id}`}
       onClick={(event) => handleCardClick(event)}
     >
-      <img className="character-img" src={src} alt={name} id={`img${id}`} />
+      <img
+        className="character-img"
+        src={src}
+        alt={name}
+        id={`img${id}`}
+        draggable="false"
+      />
       <p id={`para${id}`} className="character-name">
         {name}
       </p>

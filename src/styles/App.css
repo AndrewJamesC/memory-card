@@ -1,3 +1,34 @@
+@media only screen and (max-width: 600px) {
+  #root .card-set-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-set-container .card-container {
+    width: 120px;
+    height: 200px;
+  }
+
+  #root .scores-container {
+    font-size: 0.9rem;
+  }
+
+  #root .scores-container div {
+    padding: 2px;
+  }
+
+  section .logo.small {
+    width: 35vw;
+  }
+}
+
+@font-face {
+  font-family: simpsonsFont;
+  src: url(../assets/Simpsonfont.ttf);
+}
+* {
+  font-family: simpsonsFont, sans-serif;
+}
+
 .logo {
   width: 80vw;
   margin-left: 10%;
@@ -18,7 +49,7 @@
   transform: translate(-50%, 0%);
 }
 .instructions {
-  font-size: 2rem;
+  font-size: min(max(16px, 4vw), 25px);
   font-weight: 600;
   padding: 10px;
 }
@@ -28,19 +59,14 @@
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
-  box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
-  display: inline-block;
-  font-family: din-round, sans-serif;
-  font-size: 15px;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 20px;
-  margin: auto;
   outline: none;
   overflow: visible;
-  padding: 13px 16px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -49,26 +75,31 @@
 }
 
 .card-set-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  margin: auto;
-  width: 50vw;
-  height: 55vh;
+  justify-content: space-between;
+  width: fit-content;
+  height: fit-content;
+  gap: 20px;
 }
 
 .card-container {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  width: 200px;
-  height: 400px;
-  margin-left: 20px;
+  min-width: 180px;
+  height: 350px;
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid green;
 }
 
 .character-img {
-  padding: 10px;
-  width: 100%;
+  padding-top: 10px;
   height: 80%;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -77,4 +108,16 @@
   height: 50px;
   text-align: center;
   line-height: 50px;
+}
+
+.scores-container {
+  position: fixed;
+  right: 1vw;
+  top: 2vh;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.scores-container div {
+  padding: 10px;
 }
