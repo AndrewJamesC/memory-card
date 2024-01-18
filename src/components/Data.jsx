@@ -1,15 +1,15 @@
-import abe from "/home/andrew/repos/memory-card/src/assets/img/Abe_Simpson.png";
-import Barney from "/home/andrew/repos/memory-card/src/assets/img/Barney_Gumble.png";
-import Bart from "/home/andrew/repos/memory-card/src/assets/img/Bart_Simpson_200px.png";
-import Homer from "/home/andrew/repos/memory-card/src/assets/img/Homer_Simpson_2006.png";
-import Lisa from "/home/andrew/repos/memory-card/src/assets/img/Lisa_Simpson.png";
-import Maggie from "/home/andrew/repos/memory-card/src/assets/img/Maggie_Simpson.png";
-import Marge from "/home/andrew/repos/memory-card/src/assets/img/Marge_Simpson.png";
-import Milhouse from "/home/andrew/repos/memory-card/src/assets/img/Milhouse_Van_Houten.png";
-import Moe from "/home/andrew/repos/memory-card/src/assets/img/Moe_Szyslak.png";
-import MrBurns from "/home/andrew/repos/memory-card/src/assets/img/Mr_Burns.png";
-import Flanders from "/home/andrew/repos/memory-card/src/assets/img/Ned_Flanders.png";
-import Smithers from "/home/andrew/repos/memory-card/src/assets/img/Waylon_Smithers_1.png";
+import abe from "../assets/img/Abe_Simpson.png";
+import Barney from "../assets/img/Barney_Gumble.png";
+import Bart from "../assets/img/Bart_Simpson_200px.png";
+import Homer from "../assets/img/Homer_Simpson_2006.png";
+import Lisa from "../assets/img/Lisa_Simpson.png";
+import Maggie from "../assets/img/Maggie_Simpson.png";
+import Marge from "../assets/img/Marge_Simpson.png";
+import Milhouse from "../assets/img/Milhouse_Van_Houten.png";
+import Moe from "../assets/img/Moe_Szyslak.png";
+import MrBurns from "../assets/img/Mr_Burns.png";
+import Flanders from "../assets/img/Ned_Flanders.png";
+import Smithers from "../assets/img/Waylon_Smithers_1.png";
 const characterData = [
   {
     name: "Abe Simpson",
